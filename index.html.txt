@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylan | Roblox QA Tester & Scout Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f111a;
+            --card-bg: #1e2235;
+            --accent-color: #8a2be2; /* Canlı Mor */
+            --text-color: #f0f2f5;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header / Profil Kısmı */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), #4b0082);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 20px auto 0;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* İstatistik Kartları */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.15);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Bölüm Başlıkları */
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        /* Deneyim / Projeler */
+        .experience-list {
+            margin-bottom: 60px;
+        }
+
+        .exp-item {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .exp-role {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .exp-company {
+            color: var(--accent-color);
+            background: rgba(138, 43, 226, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Yetenekler */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .skill-badge {
+            background-color: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* İletişim Butonları */
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(180deg, var(--card-bg), var(--bg-color));
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #7b1fa2;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--text-muted);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- ÜST KISIM / PROFİL -->
+        <header>
+            <div class="avatar-placeholder">T</div>
+            <h1>Taylan</h1>
+            <p>Roblox QA Tester & Scout</p>
+            <p class="bio">RoScouts bünyesinde aktif olarak çalışan; oyun mekanikleri, hata raporlama (bug reporting), stres testleri ve topluluk yönetimi konularında deneyimli profesyonel Roblox QA test uzmanı.</p>
+        </header>
+
+        <!-- İSTATİSTİKLER -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>200M+</h3>
+                <p>Max Proje Ziyareti</p>
+            </div>
+            <div class="stat-card">
+                <h3>175M+</h3>
+                <p>Test Edilen Proje</p>
+            </div>
+            <div class="stat-card">
+                <h3>100M+</h3>
+                <p>Test Edilen Proje</p>
+            </div>
+            <div class="stat-card">
+                <h3>15M+</h3>
+                <p>Test Edilen Proje</p>
+            </div>
+        </div>
+
+        <!-- DENEYİMLER -->
+        <section class="experience-list">
+            <h2>Deneyimlerim</h2>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">QA Tester & Scout</span>
+                    <span class="exp-company">RoScouts</span>
+                </div>
+                <p style="color: var(--text-muted);">Aktif olarak Roblox projelerinde yetenek avcılığı (scouting) yapıyor, potansiyeli yüksek oyunları analiz ediyor ve kritik hataları geliştirici ekiplere raporlayarak oyun kalitesini artırıyorum.</p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Independent QA Specialist</span>
+                    <span class="exp-company">Roblox Platform</span>
+                </div>
+                <p style="color: var(--text-muted);">Toplamda 490 Milyondan fazla ziyarete sahip büyük ölçekli ve popüler Roblox oyunlarında stres testleri, UI/UX kontrolleri ve oyun içi ekonomi dengesi testleri gerçekleştirdim.</p>
+            </div>
+        </section>
+
+        <!-- YETENEKLER -->
+        <section>
+            <h2>Uzmanlık Alanları</h2>
+            <div class="skills-grid">
+                <div class="skill-badge">Hata Raporlama (Bug Reporting)</div>
+                <div class="skill-badge">Stres & Performans Testleri</div>
+                <div class="skill-badge">UI / UX Analizi</div>
+                <div class="skill-badge">Oyun Mekaniği Doğrulaması</div>
+                <div class="skill-badge">Talent Hub Profil Yönetimi</div>
+                <div class="skill-badge">Topluluk & Moderasyon Deneyimi</div>
+            </div>
+        </section>
+
+        <!-- İLETİŞİM -->
+        <section class="contact-section">
+            <h2>Benimle Çalışın</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Projeleriniz için profesyonel QA hizmeti veya scouting desteği almak istiyorsanız bana ulaşabilirsiniz.</p>
+            <a href="https://create.roblox.com/talent" target="_blank" class="btn">Roblox Talent Hub</a>
+            <a href="#" class="btn btn-secondary">Discord'dan Ulaş</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Taylan. Tüm Hakları Saklıdır.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
